@@ -12,7 +12,7 @@ jobs:
     name: terraform fmt check
     outputs:
       CHECK_STATUS: "${{ env.CHECK_STATUS }}"
-    steps:
+    step:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 2
