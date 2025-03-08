@@ -54,14 +54,17 @@ jobs:
 
   terraform-validate:
     runs-on: ubuntu-latest
-    name: terraform validate
+    name: Validate Terraform module
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v2
+      - name: terraform validate
+        uses: dflook/terraform-validate@v1
+        id: validate
         with:
-          terraform_version: 1.2.4
+          path: my-terraform-config
 
-      - name: Validate Terraform
-        run: terraform validate ./infrastructure
+      - name: Validate failed
+        if: ${{ failure() && steps.validate.outputs.failure-reason == 'validate-failed' }}
+        run: echo "terraform validate failed"
