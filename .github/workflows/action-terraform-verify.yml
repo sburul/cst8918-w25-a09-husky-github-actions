@@ -1,10 +1,7 @@
 name: Validate terraform fmt
 
 on:
-  pull_request:
-    branches:
-      - main
-      - master
+  [push]
 
 permissions:
   id-token: write
