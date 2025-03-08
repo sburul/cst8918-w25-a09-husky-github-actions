@@ -1,0 +1,24 @@
+{
+  "name": "cst8918-w25-a09-husky-github-actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sburul/cst8918-w25-a09-husky-github-actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sburul/cst8918-w25-a09-husky-github-actions/issues"
+  },
+  "homepage": "https://github.com/sburul/cst8918-w25-a09-husky-github-actions#readme",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}
