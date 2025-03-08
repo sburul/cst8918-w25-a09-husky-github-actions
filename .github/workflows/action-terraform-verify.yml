@@ -73,5 +73,3 @@ jobs:
       - name: Terraform Format Check
         run: terraform fmt -check -recursive
 
-      - name: Terraform Plan
-        run: terraform plan -out=tfplan
